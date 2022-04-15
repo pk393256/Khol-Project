@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+</head>
+<style>
+    body {
+        font-family: 'Gotham 5r';
+    }
+
+    .outer {
+        display: flex;
+        margin-left: 20%;
+        width: 70%;
+    }
+
+    .outer>div {
+        padding: 5%;
+        width: 50%;
+    }
+
+    .ai {
+        height: 25px;
+        width: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .submit {
+        background-color: #95c96f;
+        color: #fff;
+        height: 46px !important;
+        font-size: 18px;
+        font-family: 'Gotham 5r';
+        width: 282px !important;
+        border: 0;
+        border-radius: 0px;
+    }
+
+    .submit:hover {
+        background-color: #54ab15;
+    }
+
+    #email,
+    #Password {
+        height: 35px;
+        width: 80%;
+
+
+    }
+
+    label {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .list {
+        display: flex;
+    }
+
+    li {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .ch {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .same>h4 {
+        font-size: x-large;
+    }
+
+    .last {
+        margin-top: 0;
+        margin-bottom: 1px;
+        padding-left: 10px;
+
+    }
+
+    .last>a {
+        color: black;
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="left" style="border-right: 1px solid rgba(0, 0, 0, 0.263);">
+            <div class="same">
+
+                <h4>Sign In
+                </h4>
+                <p>Sign in to your Kohls.com account to shop,
+                    check out, track your order and finish
+                    enrolling in rewards.</p>
+            </div>
+            <div> <br>
+                <label for="">Email</label>
+                <br>
+                <input type="text" name="" id="email">
+            </div><br>
+            <div>
+                <label for="">Password</label>
+                <br>
+                <input type="text" name="" id="Password">
+            </div>
+            <div class="ch">
+                <label for="">
+                    <input type="checkbox" name="" class="ai">
+
+
+                    Keep me signed in <a style="color: black;" href="#">Forget Password?</a></label>
+                <h5>Check this box to stay signed in on this device. Recommended for devices that only you use.</h5>
+            </div>
+            <button class="submit">SUBMIT</button>
+        </div>
+        <div class="right">
+            <div class="same">
+                <h4>Create Account</h4>
+                <p>With a Kohls.com account, enjoy exclusive,
+                    benefits that make shopping faster and easier!</p>
+
+
+                <div class="list">
+                    <img src="https://www.kohls.com/account/media/42.0.0-693/images/login_list.png" alt="">
+                    <ul
+                        style="list-style: none;margin-left: 1px;padding: 0%;width: 70%; margin-top: 0; margin-bottom: 0;">
+                        <li style="margin-top: 0%;">
+                            Enjoy Express Checkout
+                        </li>
+
+                        <li style="padding: 5px; padding-top: 20px; padding-left: 1px;">Enroll in Kohl's Rewards today</li>
+
+                        <li style="padding: 5px;">
+                            Print Kohl's Cash
+                        </li>
+                        <li style="padding: 5px; margin-top: 10px;">
+                            Track orders easily
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button style="margin-top: 20px;" class="submit" onclick="golog()"> CREATE ACCOUNT</button>
+        </div>
+
+    </div>
+
+    <div id="last" style="display: flex; margin-left: 22%;margin-top: 50px;">
+        <img src="https://www.kohls.com/account/media/42.0.0-693/images/kohls_cash_icon.png" alt="">
+        <div>
+            <h5 class="last">
+                Looking for your Kohl's Card Account?
+            </h5>
+            <p class="last"><a href="">
+                    Looking for your Kohl's Card Account?
+                </a> or
+                <a href="">Apply for khol's card.</a>
+            </p>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
