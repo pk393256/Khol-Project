@@ -1,134 +1,149 @@
 
-    .title{
-        margin-left: 20%;
-    }
-    .sai{
-        margin-left: 20%;
-        width: 40%;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-      row-gap: 40px;
-        height: 200%;
-    }
-    #fname,#lname,#email,#Password{
-        height: 70%;
-        width: 80%;
-    
-
-    }
-    label{
-        font-size: 20px;
-        font-weight: 700;
-    }
-    .ai{
-        height: 35px;
-        width: 35px;
-        
-    }
-    .ch{
-        width: 25%;
-        margin-top: 50px;
-        margin-left: 20%;
-    }
-    .si{
-        padding-bottom: 10px;
-    }
-    #kholsre{
-        margin-top: 20px;
-        margin-left: 20%;
-
-    }
-  
-.container {
-  display: block;
-  position: relative;
-  padding-left: 40px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-/* Hide the default radio button */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* custom radio button */
-.check {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 30px;
-  background-color: white;
-  border-radius: 50%;
-  border: 1px solid black;
-}
-
-.container:hover input ~ .check {
-  background-color:white;
-}
-
-.container input:checked ~ .check {
-  background-color:white;
-}
-
-.check:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container input:checked ~ .check:after {
-  display: block;
-}
-
-.container .check:after {
- 	top: 8px;
-	left: 8px;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	background:rgb(32,128,51);
    
-}
-.rd{
-    display: flex;
-}
-#bot{
-    display: flex;
-margin-left: 20%;
-width: 60%;
-height: max-content;
-}
-#submit{
-    padding-left: 30px;
-    padding-right: 30px;
-    font-weight: 600;
-    height: 45px;
-    width: max-content;
-    font-size: 22px;
-    background-color: rgba(32, 128, 51, 0.314);
-    color: white;
-    font: 600;
-}
-#submit:hover{
-    background-color: rgb(32,128,51);
-}
-#cancal{
-    padding-left: 20px;
-    border: none;
-    font-size: 20px;
-    background-color: white;
-  text-decoration: underline;
+          
+            #mainp{
+                
+                background-color:#F0F0F0;
+                
+            }
 
-}
-.button{
-    margin-left: 20%;
-}
-.fa-solid{
-color:rgba(128, 128, 128, 0.677);
-}
+            #containerp{
+                display: flex;
+                width:70%;
+                background-color:#F0F0F0;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 2%;
+                margin-bottom:1%;
+            }
 
+            #social{
+                width:50%;
+                display: flex;
+                align-items: center;
+                border-right-width: 2px;
+                border-right-color: gainsboro;
+                border-right-style: solid;
+            }
+
+            #social > h4, p{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #social > p{
+                font-size: 20px;
+            }
+
+            #topright{
+                width:50%;
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #app{
+                width:40%;
+                display: flex;
+                align-items: center;
+                
+                
+            }
+
+            #app > img{
+                float: left;
+                width:  60px;
+                height: 60px;
+                object-fit: cover;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #app > h4{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #scantext{
+                width:50%;
+                display: block;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #scantext>p{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 12px;
+                margin-bottom: 5px;
+                margin-top: 0%;
+            }
+
+            #scantext>input{
+                background-color: black;
+                color: white;
+                width: 100px;
+                border-radius: 5px;
+                border-width: 0px;
+            }
+
+            #footergrid{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: auto;
+                width: 70%;    
+                margin-left: auto;
+                margin-right: auto;
+                border-top: 2px solid gainsboro;
+                border-bottom: 2px solid gainsboro;
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+
+            .gridcontent{
+                width:80%;
+                margin-left:auto;
+                margin-right: auto;
+                height: max-content;
+            }
+
+            .gridcontent>h5{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-bottom: 30px;
+            }
+
+            .gridcontent>p{
+                font-family:'Arial';
+                font-size: 12px;
+                margin-bottom: 30px;
+                
+            }
+            #disclaimer{
+                margin-top: 30px;
+                padding-bottom: 20%;
+            }
+
+            #disclaimer>p{
+                
+                text-align: center;
+                font-family:'Arial';
+                font-size: 11px;
+                margin-top: 15px;
+            }
+
+            #lastline{
+                width:max-content;
+                display: flex;
+                margin: auto;
+            }
+            #lastline>h6{
+                font-family:'Arial';
+                font-size: 11px;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+            }
+      
