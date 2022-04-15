@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./signin.css">
+    <script src="https://kit.fontawesome.com/9ad79c0b91.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Account</title>
+</head>
+
+<body>
+    <div id="main">
+         <div class="title">
+             <h2>Create Account</h2>
+             <p>By creating an account, you agree to Kohl's <a href="">Security & Privacy Policy</a> and <a href="">Legal Notices</a>.</p>
+
+         </div>
+        <div class="sai">
+
+            <div>
+                <label for="">First Name</label>
+                <br>
+                <input type="text" name="" id="fname">
+            </div>
+            <div>
+                <label for="">Last Name</label>
+                <br>
+                <input type="text" name="" id="lname">
+            </div>
+            <div>
+                <label for="">Email</label>
+                <br>
+                <input type="text" name="" id="email">
+            </div>
+            <div>
+                <label for="">Password</label>
+                <br>
+                <input type="text" name="" id="Password">
+            </div>
+        </div>
+        
+    </div>
+    <div class="ch">
+       <label for="">
+            <input type="checkbox" name="" class="ai">
+       
+        
+            Keep me signed in  </label>
+            <p>Check this box to stay signed in on this device. Recommended for devices that only you use.</p>
+    </div>
+    <hr style="margin-left: 20%;width: 70%;">
+    <div id="kholsre">
+        <img src="https://www.kohls.com/account/media/42.0.0-693/images/loyaltyV2/kohls-rewards-horizontal.png" alt=""><i class="fa-solid fa-2xl fa-circle-question"></i>
+       <div style="margin-top: 20px;" class="rd">
+        <label    style="margin-left: 20px;"class="container">I signed up In store
+            <input type="radio" name="radio" checked>
+            <span class="check"></span>
+          </label>
+          <label   style="margin-left: 20px;"class="container">Enroll Today!
+            <input type="radio" name="radio">
+            <span class="check"></span>
+          </label>
+          <label  style="margin-left: 20px;"
+          class="container">No Thanks.
+            <input type="radio" name="radio">
+            <span class="check"></span>
+          </label>
+
+       </div>
+       
+    </div>
+  
+    <hr style="margin-left: 20%; margin-top:30px;width: 70%;">
+   <h3 style="margin-left:20%">Stay in the loop + save 15% on your next purchase.</h3>
+    <div id="bot">
+
+        <input type="checkbox" name="" class="ai">
+   <p>Yes, sign me up for emails that deliver our best deals and the newest styles, including all the tips & tricks to make shopping even easier.
+
+    US Residents Only. Terms apply; see details. Privacy Policy.</p>
+    </div>
+    
+    <div class="button" >
+        <button   id="submit"
+        onclick="saveuser()">Create Account</button>
+        <button id="cancal" onclick="back()">Cancal</button>
+    </div>
+</body>
+<script src="./signin.js"></script>
+</html>
