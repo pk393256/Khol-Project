@@ -9,7 +9,8 @@
     <title> Account</title>
 </head>
 <style>
-     .title{
+ 
+ .title{
         margin-left: 20%;
     }
     .sai{
@@ -141,6 +142,155 @@ height: max-content;
 .fa-solid{
 color:rgba(128, 128, 128, 0.677);
 }
+
+@media all and (min-width:80px) and (max-width:660px){
+  
+    #res{
+    height: 35px;
+    width: 35px;
+  }
+  .title{
+    margin-left: 0%;
+}
+.sai{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  gap: 20px;
+    height: 100%;
+}
+#fname,#lname,#email,#Password{
+    height: 60%;
+    width: 70%;
+
+
+}
+label{
+    font-size: 20px;
+    font-weight: 700;
+}
+.ai{
+    height: 45px;
+    width: 35px;
+    
+}
+.ch{
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 0%;
+}
+.si{
+    padding-bottom: 10px;
+}
+#kholsre{
+    margin-top: 20px;
+    margin-left: 0%;
+
+}
+
+.container {
+display: block;
+position: relative;
+padding-left: 40px;
+margin-bottom: 20px;
+cursor: pointer;
+font-size: 25px;
+}
+
+/* Hide the default radio button */
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+/* custom radio button */
+.check {
+position: absolute;
+top: 0;
+left: 0;
+height: 30px;
+width: 30px;
+background-color: white;
+border-radius: 50%;
+border: 1px solid black;
+}
+
+.container:hover input ~ .check {
+background-color:white;
+}
+
+.container input:checked ~ .check {
+background-color:white;
+}
+
+.check:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+.container input:checked ~ .check:after {
+display: block;
+}
+
+.container .check:after {
+top: 8px;
+left: 8px;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background:rgb(32,128,51);
+
+}
+.rd{
+display: block;
+}
+#bot{
+display: block;
+margin-left: 0%;
+width: 90%;
+height: max-content;
+}
+#submit{
+padding-left: 30px;
+padding-right: 30px;
+font-weight: 600;
+height: 45px;
+width: max-content;
+font-size: 22px;
+background-color: rgba(32, 128, 51, 0.314);
+color: white;
+font: 600;
+}
+#submit:hover{
+background-color: rgb(32,128,51);
+}
+#cancal{
+padding-left: 20px;
+border: none;
+font-size: 20px;
+background-color: white;
+text-decoration: underline;
+
+}
+.button{
+margin-left: 0%;
+}
+.fa-solid{
+color:rgba(128, 128, 128, 0.677);
+}
+
+  }
+  
+  
+  
+  
+  
+  
+  
+  
 
 #mainp{
                 
