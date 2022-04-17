@@ -1,5 +1,7 @@
 export default async function footer(){
-    return  `<div id = "mainp">
+    return  `
+    
+    <div id = "mainp">
     <div id = "containerp">
         <div id = "social">
             <h4>CONNECT<br>WITH US</h4>
