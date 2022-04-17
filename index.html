@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5594c2eb28.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+        }
+
+        header {
+            /* position: relative; */
+        }
+
+
+        #header_1 {
+            width: 100%;
+            display: flex;
+            height: 40px;
+            border-bottom: 1px solid #aaa;
+            background-color: #eee;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navbar {
+            width: 100%;
+            display: flex;
+            height: 75px;
+            border-bottom: 1px solid #ccc;
+            background-color: white;
+            align-items: center;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        #navbar>div:first-child {
+            display: flex;
+            width: 53%;
+        }
+
+        #navbar>div:nth-child(2) {
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #logo {
+            width: auto;
+            text-align: center;
+        }
+
+        #logo>img {
+            width: 80%;
+            height: 80%;
+        }
+
+        #search_area {
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 100%;
+            border-radius: 5px;
+            width: 70%;
+        }
+
+        #search_area>i {
+            font-size: 180%;
+
+        }
+
+        #search_area>input {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            margin-left: 10px;
+            font-size: large;
+            outline: none;
+        }
+
+        #user {
+            /*  */
+
+        }
+
+        #user>div {
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 84%;
+            /* overflow: hidden; */
+            text-align: center;
+            position: relative;
+        }
+
+        #user>div::after {
+            content: 'i';
+            width: 20px;
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: #ccfbeb;
+            position: absolute;
+            top: 0px;
+            left: -6px;
+        }
+
+        #user>div>i {
+            font-size: 217%;
+            margin-top: 7px;
+        }
+
+        #cart {
+            text-align: center;
+        }
+
+        #cart>div {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+        }
+
+        #cart>div>i {
+            font-size: 280%;
+        }
+
+        #cart>div>div {
+            display: flex;
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            font-size: small;
+            width: 15px;
+            height: 15px;
+            top: 6px;
+            left: 22px;
+            align-items: center;
+            /* text-align: center; */
+            justify-content: center;
+        }
+
+        #checkout {
+            text-align: center;
+        }
+
+        #checkout>div {
+            text-align: center;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        #checkout>div>i {
+            font-size: 182%;
+        }
+
+        #header_2 {
+            width: 100%;
+            height: 44px;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 20px 5px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #header_2>div:first-child {
+            display: flex;
+
+            height: 25px;
+            align-items: center;
+            /* width: fit-content;
+            height: fit-content; */
+        }
+
+        #header_2>div:nth-child(2) {
+            display: flex;
+        }
+
+        #short>div {
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            margin: 3px;
+            margin-right: 15px;
+        }
+
+        #store {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        #header_2>div:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        #coupon,
+        #help {
+            position: relative;
+            margin-right: 60px;
+        }
+
+        #coupon::before,
+        #help::before {
+            content: '$';
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            border-radius: 50%;
+            padding: 1px;
+            position: absolute;
+            left: -30px;
+            text-align: center;
+        }
+
+        #help::before {
+            content: '?';
+        }
+
+        #shipping_banner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 65px;
+            /* border: 1px solid black; */
+            background-color: black;
+            font-size: 20px;
+            margin-top: 45px;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 60px;
+        }
+
+        #shipping_banner>div {
+            width: 70px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 15px;
+        }
+
+        #shipping_banner>div+div {
+            width: 526px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -26px;
+        }
+
+        #shipping_banner>div+div>p {
+            font-size: 22px;
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+
+        #banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* height: 100vh; */
+            /* border: 2px solid sandybrown; */
+            padding: 0px 10px 0px 10px;
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220411-hero-01);
+            position: relative;
+
+        }
+
+        #left_arrow {
+            width: 50px;
+            height: 70px;
+            clip-path: polygon(70% 0, 21% 49%, 66% 100%, 51% 100%, 0% 50%, 56% 0);
+            background-color: rgb(73, 72, 72);
+        }
+
+        #right_arrow {
+            width: 50px;
+            height: 70px;
+            clip-path: polygon(26% 0, 64% 52%, 23% 100%, 6% 100%, 51% 52%, 7% 0);
+            background-color: rgb(73, 72, 72);
+        }
+
+        #banner_img {
+            width: 85%;
+
+            height: 100%;
+            /* border: 2px solid saddlebrown; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #banner_img>div>p {
+            font-size: 100px;
+            font-weight: normal;
+            margin-top: 100px;
+        }
+
+        #banner_img>div>p+p {
+            font-size: xx-large;
+            margin-top: 0px;
+            /* text-align: end; */
+        }
+
+        #banner_img>div>h6 {
+            text-decoration: underline;
+            font-size: x-large;
+            margin-top: 5px;
+            font-weight: lighter;
+        }
+
+        #right_arrow+div {
+            /* align-self: flex-end; */
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            width: 220px;
+            height: 200px;
+            background-color: white;
+            text-align: center;
+            padding: 20px 15px 10px;
+        }
+
+        #toggel {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #toggel>div {
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-right: 25px;
+        }
+
+        #toggel+div {
+            text-align: center;
+            font-size: x-large;
+            margin-top: 20px;
+        }
+
+        #basket {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            margin: 20px 0px 60px;
+        }
+
+        #basket>div {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-image: linear-gradient(to bottom, #6455bb, #887bcd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+        }
+
+        #basket>div:hover {
+            width: 122px;
+            height: 122px;
+            /* transform: translateY(-/px); */
+        }
+
+        #basket+div {
+            width: 100%;
+            min-height: 80px;
+            border: 5px solid #6455bb;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        #basket+div>div {
+            display: flex;
+        }
+
+        #basket+div>div>img {
+            width: 60px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        #split_image,
+        #split_image_2,
+        #split_image_3,
+        #split_image_4 {
+            display: flex;
+            position: relative;
+        }
+
+        #split_image>div,
+        #split_image_2>div,
+        #split_image_3>div,
+        #split_image_4>div {
+            width: 50%;
+            margin: 15px;
+            height: 600px;
+            display: flex;
+        }
+
+        #split_image>div:first-child {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-homesale-bau-main-01);
+        }
+
+        #split_image>div:first-child>img {
+            width: 120px;
+            height: 120px;
+            margin-top: 10px;
+            margin-left: -25px;
+        }
+
+        #split_image>div:nth-child(2),
+        #split_image_4>div:nth-child(2) {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-homesale-bau-main-02);
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+
+        #split_image>div>div,
+        #split_image_4>div>div {
+            width: 250px;
+            height: 220px;
+            background-color: rgba(255, 255, 255, 0.788);
+            text-align: center;
+            padding: 25px 10px 25px;
+            font-size: x-large;
+        }
+
+        #split_image>div:nth-child(2)>div {
+            height: 170px;
+            font-weight: bold;
+        }
+
+        #split_image>div:nth-child(3),
+        #split_image_2>div:nth-child(3),
+        #split_image_3>div:nth-child(3),
+        #split_image_4>div:nth-child(3) {
+            width: 330px;
+            height: 330px;
+            background-color: #004c83;
+            color: white;
+            position: absolute;
+            top: 135px;
+            left: 520px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #card_containers {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
+        #card_containers>div {
+            width: 25%;
+            height: 250px;
+            background-color: #da2128;
+            margin-right: 25px;
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        #card_containers>div:first-child {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-homesale-bau-tiles-01);
+        }
+
+        #card_containers>div:nth-child(2) {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-homesale-bau-tiles-02);
+        }
+
+        #card_containers>div:nth-child(3) {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-homesale-bau-tiles-03);
+        }
+
+        #card_containers>div:last-child {
+            margin-right: 0px;
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-homesale-bau-tiles-04);
+        }
+
+        #card_containers>div>div {
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 50px;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: -20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #card_containers>div>div:hover {
+            font-size: 21px;
+            width: 205px;
+            height: 55px;
+        }
+
+        #sephora_kohls {
+            display: flex;
+            width: 100%;
+            height: 80px;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #sephora_kohls>img:first-child {
+            height: 35px;
+            width: 300px;
+        }
+
+        #sephora_kohls>h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin: 10px;
+        }
+
+        #sephora_kohls>span {
+            font-size: x-large;
+            text-decoration: underline;
+            margin: 10px;
+        }
+
+
+        #cosmetics_cream {
+            width: 100%;
+            height: 100vh;
+            background-color: #f7f0e5;
+            margin-bottom: 30px;
+        }
+
+        #cosmetics_cream>div {
+            height: 170px;
+            /* border: 1px solid seagreen; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #cosmetics_cream>div>h1 {
+            font-size: 50px;
+        }
+
+        #cosmetics_cream>div>p {
+            margin-top: 10px;
+            font-size: 25px;
+        }
+
+        #cosmetics_cream>div>span {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        #cosmetics_cream>div:nth-child(2) {
+            width: 100;
+            height: max-content;
+            border: 1px solid seagreen;
+        }
+
+        #cosmetics_product {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cosmetics_product>div {
+            margin-right: 50px;
+        }
+
+        #cosmetics_product>div>p {
+            text-align: center;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        #cosmetics_product>div>div {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+
+        #cosmetics_product>div:hover>div {
+            width: 135px;
+            height: 135px;
+            transform: translateY(-5px);
+        }
+
+        #cosmetics_product>div:hover>p {
+            font-size: 28px;
+            transform: translateY(-5px);
+        }
+
+        #cosmetics_product>div:first-child>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-01);
+        }
+
+        #cosmetics_product>div:nth-child(2)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-02);
+        }
+
+        #cosmetics_product>div:nth-child(3)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-03);
+        }
+
+        #cosmetics_product>div:nth-child(4)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-04);
+        }
+
+        #cosmetics_product>div:nth-child(5)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-05);
+        }
+
+        #cosmetics_product>div:nth-child(6)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-06);
+        }
+
+        #get_reward {
+            width: 100%;
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20210816-sephora-kohls-rewards);
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #get_reward>div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* align-content: ; */
+            width: 45%;
+            margin-right: -145px;
+        }
+
+        #get_reward>div>span {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #get_reward>div>p {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #get_reward+p {
+            text-align: center;
+            margin: 10px;
+            font-size: small;
+        }
+
+        #split_image_2>div {
+            height: 350px;
+        }
+
+        #split_image_2>div:first-child {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407ve-exceptions-split-01);
+        }
+
+        #split_image_2>div:nth-child(2) {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407ve-exceptions-split-02);
+        }
+
+        #split_image_2>div:nth-child(3) {
+            height: 250px;
+            width: 500px;
+            background-color: black;
+            top: 50px;
+            left: 420px;
+            font-size: xx-large;
+            line-height: 60px;
+            padding: 20px;
+        }
+
+        #brand_logo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #brand_logo>div {
+            text-align: center;
+            margin-right: 40px;
+        }
+
+        #brand_logo>div>div {
+            width: 165px;
+            height: 165px;
+            background-color: black;
+            border-radius: 50%;
+
+        }
+
+        #brand_logo>div:hover>div {
+            width: 170px;
+            height: 170px;
+        }
+
+        #brand_logo>div:first-child>div {
+            background-image: url(https://yt3.ggpht.com/ytc/AKedOLSQFLLE5MzjLP4aLWaWngMBBD4UqLLJZ1_FY1JrfA=s900-c-k-c0x00ffffff-no-rj);
+            background-size: 170px;
+        }
+
+        #brand_logo>div:nth-child(2)>div {
+            background-image: url(https://www.paragon.com.sg/media/Tenants%20Promotion%20Page/UA/paragon_feb2020-01.png);
+            background-position: center;
+            background-size: 200px;
+        }
+
+        #brand_logo>div:nth-child(3)>div {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFVO_zeQq0PCI-BuckRX6rylNJH_98FEJ7Z7ps6ZJfPNjimS7kVvbiMx-lu-Z7TfcTNo&usqp=CAU);
+            background-position: center;
+            background-size: 200px;
+        }
+
+        #brand_logo>div:nth-child(4)>div {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaBdnicEJwn5WBjbdCLVE_c2R0Gp6MJqsqIgVoAvR1oBY9BNrlFtDVlZF1Wj9s3hoqe4c&usqp=CAU);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 220px;
+        }
+
+        #brand_logo>div>h1 {
+            font-size: 46px;
+            font-weight: bold;
+        }
+
+        #brand_logo>div>p {
+            font-size: 20px;
+        }
+
+        #shopping_today {
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #shopping_today>h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #shopping_today>div {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+
+        #shopping_today>div>div>div {
+            width: 130px;
+            height: 130px;
+            /* border: 1px solid black; */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+
+        #shopping_today>div>div:hover>div {
+            width: 135px;
+            height: 135px;
+        }
+
+        #shopping_today>div>div:first-child>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-01);
+        }
+
+        #shopping_today>div>div:nth-child(2)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-02);
+        }
+
+        #shopping_today>div>div:nth-child(3)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-03);
+        }
+
+        #shopping_today>div>div:nth-child(4)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-04);
+        }
+
+        #shopping_today>div>div:nth-child(5)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-05);
+        }
+
+        #shopping_today>div>div:nth-child(6)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-06);
+        }
+
+        #shopping_today>div>div:nth-child(7)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-07);
+        }
+
+        #shopping_today>div>div:nth-child(8)>div {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220407-shoprail-08);
+        }
+
+        #shopping_today>div>div>p {
+            text-align: center;
+            font-size: x-large;
+        }
+
+        #split_image_3>div {
+            height: 410px;
+        }
+
+        #split_image_3>div:first-child {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-shoe-sale-01);
+        }
+
+        #split_image_3>div:nth-child(2) {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-shoe-sale-02);
+        }
+
+        #split_image_3>div:nth-child(3) {
+            height: 350px;
+            width: 500px;
+            background-color: white;
+            color: black;
+            border: 6px solid #ef4822;
+            top: 30px;
+            left: 420px;
+            font-size: xx-large;
+            line-height: 60px;
+            padding: 20px;
+        }
+
+        #split_image_3>div:nth-child(3)>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* width: 100%; */
+        }
+
+        #split_image_3>div:nth-child(3)>div>p {
+            font-size: x-large;
+            text-decoration: underline;
+            margin: 10px;
+        }
+
+        #split_image_3>div:nth-child(3)>div>span {
+            font-weight: bold;
+        }
+
+        #brand_logo_2 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 30px;
+            margin-bottom: 100px;
+
+        }
+
+        #brand_logo_2>div {
+            width: 125px;
+            height: 125px;
+            border: 4px solid #ef4822;
+            border-radius: 50%;
+
+        }
+
+        #brand_logo_2>div:first-child {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAAD39/ft7e34+PhoaGhQUFDDw8PQ0NDc3Nyrq6uTk5Ovr6+7u7vKysrn5+ebm5tXV1csLCzW1tZtbW0zMzOBgYEiIiJCQkJdXV20tLRycnIQEBDx8fGZmZk8PDx8fHxJSUkXFxeKioqioqIUFBQ1NTWfOkAUAAAD9UlEQVR4nO3aa3vxShSAYSMIIaSlVdUWld3//xN3HBIJOc6sId7rub9bM4tZc9TpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE/N6T66Bw30ND7jbKV7Yc3Um2p86lvNxHtiwywcrHTyixLsS/dFXtd9V2qr90t0l2ok3B1p82CnlAp1CjDSW6oX2f7Icib9KDv14WpHiL4drbF9F+776yE91Z/rx1gp9SrXI0mjYKBO9o5BmKh8lSfWKTHO5+Kcnfr1NMvvxDvEaNlq35vu3+L0TMrvaHgIspbpmIxROFAXfdNJ3jmGac08Ew3Nr1R6ZuV3choMAn0zFw3NZTo7tZSYHdbHUFuBSIYus6ZU+Z14qg2DNDVrJhYye6zROdwjZ9L0rJkYm5ffye8p3k4oXGO3Q/NYfhOxBuKxMRaL2MD1rBnbCZaMHwcVKekmerlD82AtecRxkrD3PftmF/Rs+X2LtrRLAouGLeX4+UNTuPxOgkto4cgFoqH5WpSdUi/iK9YsFVw6do5R+FKcXbTlsHDDsLmEt31D8+2vy7JT6sfGeuylGlhYiJ+Yjz/K03v9tNLud7oNa7/hbLIqz85G+Z31060MbLTQc7fLorQSmjeDNQyzDYnHn//sKrOzVH5nVxsK0dizST8/oaw3O+V3NrlqzeCaLqsb3/xVWQ2lmsx33Z7MznseVMyaCXvldxZct2h+WVpzaB6F1k+jvdtGjQ4X0dAs3Gve2PhSaZS4+QlNfsT5T92heWC7/M7ymg51AjkNhubB+51OaV5u6013vj33vXpBT/vSfRdrrmA6b3L2PD3lNXGX8jsbFvThq+YQajJrxlZiC24dxf2r/pprL+gZ+/teknTLvurSrjSbNWO/WnOYiesNW1bRUXvkNR+aB5u73+J1OoXXXGdvwTw75znToPKQV8D4XUxH2SC9fPPrsee7rh+O1x//aWYn8i6mw6/umQiRdzEt27vkt3tA+cU0JvvGhN7F9OQcK6TtZS/mmxpV99DI48ov5lrNb/DA8ouVr/dmHlp+idBafsLvYtosZSj+LqbPSoaD1vzdqFN0vjci+ixtTnzT1pbyS8iuh5bexYzUOlrUZO1dzEzBfzyas34xr2svk1/QtvK7mAuk99fC8ksxPj4N7nMxr89wRWxt+aWY5Be07P/u+bQX/b87Xsyb0bv5bH35pf02z8/Gn7Iscqozyljaf5aW5tR/lI6O7s80PBO90v8JpgzavbiXqXNhs/Mecy8vpFe+Q/1a+E9XfDe63l9Bev3wuabOErPJInuc2vR/3CfYlzU0G079z0/fHY7aeyQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAv+Z/HBwq9QVvQoQAAAAASUVORK5CYII=);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 120px;
+        }
+
+        #brand_logo_2>div:nth-child(2) {
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Under_armour_logo.svg/1200px-Under_armour_logo.svg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100px;
+        }
+
+        #brand_logo_2>div:nth-child(3) {
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 90px;
+        }
+
+        #brand_logo_2>div:nth-child(4) {
+            background-image: url(https://www.citybiz.co/wp-content/uploads/2021/03/Skechers-logo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 110px;
+        }
+
+        #brand_logo_2>div:nth-child(5) {
+            background-image: url(https://logodix.com/logo/411878.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 110px;
+        }
+
+        #brand_logo_2>div:nth-child(6) {
+            background-image: url(https://s3.amazonaws.com/blab-impact-published-production/vR8RT1qF1cfXbV1etAFfAoopeHMsH27G);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100px;
+        }
+
+        #brand_logo_2>div:nth-child(7) {
+            background-image: url(https://www.marinabaysands.com/content/dam/singapore/marinabaysands/master/main/home/shopping/Nine%20West-website-directory-logo-500x454.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 120px;
+        }
+
+        #brand_logo_2>div:nth-child(8) {
+            background-image: url(https://www.worldfootwear.com/media/images/news/wf201934102p.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 120px;
+        }
+
+        #split_image_4>div:first-child {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-levis-01);
+        }
+
+        #split_image_4>div:nth-child(2) {
+            background-image: url(https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-levis-02);
+        }
+
+        #split_image_4>div:nth-child(3) {
+            width: 300px;
+            height: 210px;
+            border: 4px solid black;
+            background-color: white;
+            color: black;
+            top: 200px;
+            left: 540px;
+            overflow: hidden;
+        }
+
+        #split_image_4>div:nth-child(3)>div>img {
+            width: 140px;
+            margin-top: 0px;
+        }
+
+        #best_moms,
+        #laurens {
+            width: 100%;
+            height: 450px;
+            background-image: url(/best_moms.png);
+            margin-top: 50px;
+            background-repeat: no-repeat;
+        }
+
+        #heart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+
+        #heart>div {
+            display: inline-block;
+            width: 135px;
+            aspect-ratio: 1;
+            border-image: radial-gradient(rgba(192, 123, 123, 0.733) 69%, #0000 70%) 84.5% fill/100%;
+            clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+            margin-right: 50px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #heart>div:hover {
+            width: 140px;
+        }
+
+        #laurens {
+            background-image: url(/laurens.png);
+        }
+
+        .slide {
+            margin: 10px auto;
+            display: flex;
+            width: 87%;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .slide>#slide_left,
+        .slide>#slide_right,
+        .slide>#slide_left_2,
+        .slide>#slide_right_2 {
+            width: 30px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            /* clip-path: polygon(49% 0, 19% 50%, 46% 100%, 25% 100%, 0% 50%, 25% 0%);
+                background-color: black; */
+        }
+
+        .slide>#slide_left>div,
+        .slide>#slide_left_2>div {
+            width: 20px;
+            height: 25px;
+            clip-path: polygon(81% 0, 19% 50%, 83% 100%, 64% 100%, 0% 50%, 64% 0);
+            background-color: black;
+        }
+
+        .slide>#slide_right>div,
+        .slide>#slide_right_2>div {
+            width: 20px;
+            height: 25px;
+            clip-path: polygon(30% 0, 80% 50%, 30% 100%, 15% 100%, 65% 50%, 15% 0);
+            background-color: black;
+        }
+
+        #slide,
+        #slide_2 {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        #slide>div,
+        #slide_2>div {
+            width: fit-content;
+            height: fit-content;
+            margin-right: 25px;
+        }
+
+        #slide>div>#img,
+        #slide_2>div>#img {
+            width: 160px;
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 160px 180px;
+        }
+
+        #slide>div>#content,
+        #slide_2>div>#content {
+            width: 160px;
+            height: 100px;
+            /* background-color: #21d4da; */
+        }
+
+        #slide>div>#content>p,
+        #slide_2>div>#content>p {
+            font-weight: bold;
+            text-align: center;
+            font-size: small;
+        }
+
+        #super {
+            background-image: url(/super.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100%;
+            height: 550px;
+            margin: 20px auto;
+        }
+
+        #easy_shop {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #easy_shop>div {
+            width: 47%;
+            height: 80vh;
+            margin: 15px;
+            /* border: 1px solid seagreen; */
+        }
+
+        #easy_shop_1 {
+            background-image: url(/fast_free.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            background-size: 100%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        #easy_shop_2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #easy_shop_2>div {
+            width: 48%;
+            height: 48%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            /* border: 1px solid saddlebrown; */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            background-size: 100%;
+        }
+
+        #easy_shop_2>div:first-child {
+            background-image: url(/amazon.png);
+            margin-right: 25px;
+            margin-bottom: 25px;
+            
+        }
+
+
+        #easy_shop_2>div:nth-child(2) {
+            background-image: url(/khol_reward.png);
+            margin-bottom: 25px;
+        }
+
+        #easy_shop_2>div:nth-child(3) {
+            background-image: url(/khol_app.png);
+            margin-right: 25px;
+        }
+
+        #easy_shop_2>div:nth-child(4) {
+            background-image: url(/gift_card.png);
+        }
+
+        /* #offers {
+            width: 100%;
+            display: flex;
+            padding: 25px 15px;
+        }
+
+        #offers>div {
+            width: 25%;
+            border: 15px solid purple;
+            margin: 20px;
+            text-align: center;
+            padding: 30px 15px 15px 15px;
+        }
+
+        #offers>div>p {
+            font-size: 100px;
+            font-weight: bolder;
+            margin-top: -17px;
+            margin-bottom: -20px;
+
+        }
+        
+
+        #offers>div>h3+h4{
+            
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <header> -->
+    <div id="header_1">
+        <span style="color:#da2128;font-size: 14px; cursor: pointer;"><b style="font-size: 16px;">HOORAY</b>—Everyone
+            gets <b style="font-size: 16px;">FREE SHIPPING</b>!
+            <span style="font-size: 10px;text-decoration: underline;">details </span> </span>
+        <!-- Fast & free store pickup! details -->
+        <span style="font-size: 14px;cursor: pointer;"><b style="font-size: 16px;">&NonBreakingSpace; Fast & free
+            </b>store pickup! <span style="font-size: 10px;text-decoration: underline;">details</span> </span>
+        <!-- Take an extra 30%, 20% or 15% off when you use a Kohl's Card. details -->
+        <span style="font-size: 14px;cursor: pointer;"><b style="font-size: 16px;">&NonBreakingSpace; Take an extra
+            </b>30%, 20% or 15% off when you use a Kohl's Card. <span
+                style="font-size: 10px;text-decoration: underline;">details</span> </span>
+    </div>
+
+    <nav id="navbar">
+        <div>
+            <div id="logo">
+                <img src="kohls_logo.jpg" alt="">
+            </div>
+            <div id="search_area">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search" placeholder="What are you looking for today?">
+            </div>
+        </div>
+        <div>
+            <div id="user">
+                <div>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <span>Account</span>
+            </div>
+            <div id="cart">
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div>0</div>
+                </div>
+                <span>$0.00</span>
+            </div>
+            <div id="checkout">
+                <div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <span>Checkout</span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="header_2">
+        <div>
+            <div id="short">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <span>Shop by Category</span><span style="font-size: x-large;color: #ccc;margin-left: 50px;">⏐</span>
+            <div id="store">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <span>My Store: Select Store </span>
+        </div>
+        <div>
+            <!-- <div> -->
+            <div id="coupon">Kohl's Coupons</div>
+            <!-- </div> -->
+            <div id="help"> Help</div>
+        </div>
+    </div>
+    <!-- </header> -->
+
+    <div id="shipping_banner">
+        <div>
+            ⛟
+        </div>
+        <div>
+            <h6>FREE SHIPPING</h6>
+            <p>with a $35 purchase.</p> <br>
+            <p style="margin-top: -19px;margin-left: -50px;">No minimum purchase required for MVCs! <a href=""
+                    style="color:white">details</a></p>
+        </div>
+    </div>
+
+    <div id="banner">
+
+        <div id="left_arrow">
+
+        </div>
+
+        <div id="banner_img">
+            <!-- <div>
+               <p> Celebrate spring <br>in style and save! </p>
+               <p>Easter is Sunday, April 17.</p>
+               <h6 style="margin-top: 30px;">Clothing</h6> <br>
+               <h6>Shoes</h6> <br>
+               <h6 style="margin-bottom: 50px;">Accessories</h6> <br>
+            </div> -->
+        </div>
+
+
+        <div id="right_arrow">
+
+        </div>
+
+        <div id="">
+            <p style="font-size: x-large;font-weight: bold;margin-bottom: -10px;">Starting at</p>
+            <p style="font-size: 50px; margin: 0;margin-bottom: -10px;">24.99</p>
+            <p style="font-size:x-large;font-weight: bold;margin-bottom: -5px;">+ save more</p>
+            <p style="font-size:x-large;font-weight: bold;">with a coupon</p>
+            <p style="font-size: 21px;margin-bottom: 0px;">Dresses for women.</p>
+            <p style="font-size: 21px;margin-bottom: 5px;">Orig. $30-$98</p>
+            <p style="font-size: 12px;font-weight: bold;">See coupon for details</p>
+        </div>
+    </div>
+
+    <div id="toggel">
+        <div id="toggel_1"></div>
+        <div id="toggel_2"></div>
+        <div id="toggel_3"></div>
+    </div>
+
+    <div>
+        <h1>Build a basket they'll love.</h1>
+
+        <div id="basket">
+
+        </div>
+
+        <div>
+            <p>
+                <span style="font-weight: bold;">Bring your Easter picks home sooner ... <br>
+                    <span style="font-size: xx-large;">Fast & Free Store Pickup in </span> 1 hour or less!
+                    <span style="font-size: small;text-decoration: underline;">details</span></span>
+            </p>
+            <div>
+                <img src="/contact_less.jpg" alt="">
+                <h5>Contactless <br> Drive Up</h5>
+            </div>
+
+            <div>
+                <img src="/instore.jpg" alt="">
+                <h5>In-Store <br> Pickup</h5>
+            </div>
+        </div>
+    </div>
+
+    <div id="split_image">
+        <div>
+            <div>
+                <h1>109.99</h1>
+                <p>PowerXL</p>
+                <p>Smokeless Grill or</p>
+                <p>7-qt. Vortex Air Fryer.</p>
+                <p>Reg. $159.99- $169.99.</p>
+            </div>
+            <img src="	https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220215-kcash-earn-10?fmt=png-alpha" alt="">
+        </div>
+        <div>
+            <div>
+                <p>Starting at</p>
+                <h1>20% off</h1>
+                <p>bedding.</p>
+            </div>
+        </div>
+
+        <div>
+            <p style="font-size:90px;font-weight: bold;line-height: 80px;margin-bottom: 10px;">HOME <br> SALE</p>
+            <p style="font-size:30px;font-weight: bold;line-height: 30px;margin-bottom: 10px;">Refresh <br>
+                inside and out.</p>
+            <p style="font-size:20px;line-height: 20px;margin-bottom:15px;">Select styles on sale <br> through April 16
+            </p>
+        </div>
+    </div>
+
+    <div id="card_containers">
+        <div>
+            <div>
+                <h3>Outdoor <br> Living</h3>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>Kitchen <br> & Dining</h3>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>Bed & Bath</h3>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>Home <br> Price Break</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="sephora_kohls">
+        <img src="/sephora.jpg" alt="">
+        <h1>+</h1>
+        <img src="/kohls_logo.jpg" alt="">
+        <span>Shop Now</span>
+    </div>
+
+    <div id="cosmetics_cream">
+        <div>
+            <h1>Skin Happens, SClIENCE SAVES IT</h1>
+            <p>Clinically proven formulas for your top concerns.</p>
+            <span>Shop Now</span>
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+
+    <div id="cosmetics_product">
+        <div>
+            <div>
+
+            </div>
+            <p>Makeup</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <p>Skincare</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <p>Hair</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <p>Fragrance</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <p>Tools & <br>
+                Brushes</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <p>Bath & <br>
+                Body</p>
+        </div>
+
+    </div>
+
+    <div id="get_reward">
+        <img src="/sephora_khols.png" alt="">
+        <div>
+            <span>
+                <h2>Two ways to get rewarded ... </h2>That's the beauty of shopping Sephora at Kohl's.
+            </span>
+            <p>Learn More</p>
+        </div>
+    </div>
+
+    <p>Coupons and Kohl’s Cash® do not apply to Sephora at Kohl’s purchases, but you can still earn Kohl’s Rewards®.</p>
+
+    <div id="split_image_2">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+
+        <div>
+            <h1>Now's the time
+                to save on your
+                favorite brands</h1>
+            <p style="font-size:15px;line-height: 20px;margin-bottom:15px;margin-top: 5px;font-weight: bold;">Coupons do
+                not apply</p>
+        </div>
+    </div>
+
+    <div id="brand_logo">
+        <div>
+            <div>
+
+            </div>
+            <h1>20% off </h1>
+            <p>Select styles on sale <br> through April 16.</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <h1>25% off </h1>
+            <p>Select styles on sale <br> through April 17.</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <h1>25% off </h1>
+            <p>Select styles on sale <br> through April 16.</p>
+        </div>
+
+        <div>
+            <div>
+
+            </div>
+            <h1>40% off </h1>
+            <p>Select styles on sale <br> through April 19.</p>
+        </div>
+    </div>
+
+    <div id="shopping_today">
+        <h1>What are you shopping for today?</h1>
+        <div>
+            <div>
+                <div>
+
+                </div>
+                <p>Home</p>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+                <p>Outdoor<br>
+                    Living</p>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+                <p>Women</p>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+                <p>Men</p>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+                <p>Kids</p>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+                <p>Active</p>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+                <p>Shoes</p>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+                <p>Accessories</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="split_image_3">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+
+        <div>
+            <img src="/seasons.png" alt="">
+            <div>
+                <p>Women</p>
+                <span>|</span>
+                <p>Men</p>
+                <span>|</span>
+                <p>Kids</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="brand_logo_2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="split_image_4">
+        <div>
+            <div>
+                <h1>30% off</h1>
+                <p>Clothing for</p>
+                <p>men and women</p>
+            </div>
+
+        </div>
+        <div>
+            <div>
+                <p>Up to</p>
+                <h1>50% off</h1>
+                <p>Clothing for kids,</p>
+                <p>toddlers and baby</p>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <img src="https://www.z-arts.org/wp-content/uploads/2019/03/Levis-logo-quer.svg_.png" alt="">
+            </div>
+            <p style="font-size:60px;font-weight: bold;line-height: 80px;margin-top: -36px;margin-bottom: 0px;">SALE</p>
+            <!-- <p style="font-size:30px;font-weight: bold;line-height: 30px;margin-bottom: 10px;">Refresh <br>
+            inside and out.</p> -->
+            <p style="font-size:18px;line-height: 15px;margin-bottom:15px;margin-bottom: 0px;">Select styles on sale
+                through April 16</p>
+            <p style="font-size:15px;line-height: 20px;margin-bottom:15px;margin-top: 5px;font-weight: bold;">Coupons do
+                not apply</p>
+        </div>
+    </div>
+
+    <div id="best_moms">
+
+    </div>
+
+    <div id="heart">
+        <div>
+            <h1 style="margin-top: 15px;">$15</h1>
+            <span style="font-size: 20px;font-weight: bold;">& Under</span>
+        </div>
+
+        <div>
+            <h1 style="margin-top: 15px;">$25</h1>
+            <span style="font-size: 20px;font-weight: bold;">& Under</span>
+        </div>
+
+        <div>
+            <h1 style="margin-top: 15px;">$50</h1>
+            <span style="font-size: 20px;font-weight: bold;">& Under</span>
+        </div>
+
+        <div>
+            <!-- <h1 style="margin-top: 15px;">$15</h1> -->
+            <p style="font-size: 25px;font-weight: bold;margin-top: 10px;">Extra <br> Special <br> Gifts</p>
+        </div>
+
+        <div>
+            <!-- <h1 style="margin-top: 15px;">$15</h1> -->
+            <p style="font-size: 25px;font-weight: bold;margin-top: 20px;">Gifts <br> Cards</p>
+        </div>
+    </div>
+
+    <div id="laurens">
+
+    </div>
+
+    <div style="text-align: center;width: 100%;margin-top: 80px;">
+        <h2>More for you</h2>
+        <div class="slide">
+            <div id="slide_left">
+                <div></div>
+            </div>
+
+            <div id="slide">
+            </div>
+
+            <div id="slide_right">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="super"></div>
+
+    <div style="text-align: center;width: 100%;margin-top: 80px;display: flex;">
+        <div style="width: 30%;">
+            <h2>You Might Like</h2>
+        </div>
+        <div style="width: 70%;">
+            <div class="slide">
+                <div id="slide_left_2">
+                    <div></div>
+                </div>
+
+                <div id="slide_2">
+                </div>
+
+                <div id="slide_right_2">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width:100%; background-color:#ddd6d6;text-align: center;margin-top: 100px;">
+        <p style="font-size: 50px;margin-top: 20px;">Shopping made easy.</p>
+
+        <div id="easy_shop">
+            <div id="easy_shop_1">
+
+            </div>
+            <div id="easy_shop_2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <p style="font-size: 35px;margin-top: 20px;">Have a Kohl's Return? It's quick & hassle-free!
+            <span style="font-size: 15px;text-decoration: underline;font-weight: bold;">Learn More</span>
+        </p>
+    </div>
+</body>
+<script>
+    var banner_img = document.querySelector('#banner_img')
+    var banner = document.querySelector('#banner')
+    var left_arrow = document.querySelector('#left_arrow')
+    var right_arrow = document.querySelector('#right_arrow')
+    var toggel_1 = document.querySelector('#toggel_1')
+    var toggel_2 = document.querySelector('#toggel_2')
+    var toggel_3 = document.querySelector('#toggel_3')
+    var basket = document.querySelector('#basket')
+    var slide = document.querySelector('#slide')
+    var slide_left = document.querySelector('#slide_left')
+    var slide_right = document.querySelector('#slide_right')
+    var slide_2 = document.querySelector('#slide_2')
+    var slide_left_2 = document.querySelector('#slide_left_2')
+    var slide_right_2 = document.querySelector('#slide_right_2')
+
+
+    function banner_change() {
+        var arr = [['https://media.kohlsimg.com/is/image/kohls/hp2-d-20220411-hero-01', ' Dresses ', ' Shoes & Sandals ', ' Jewelry & Accessories '],
+        ['https://media.kohlsimg.com/is/image/kohls/hp2-d-20220409-hero-02', ' Clothing ', ' Shoes ', ' Accessories '],
+        ['https://media.kohlsimg.com/is/image/kohls/hp2-d-20220409-hero-03', ' Girls ', ' Boys ', ' Baby ']]
+
+
+        var div = document.createElement('div')
+        banner.style.backgroundImage = `url(${arr[0][0]})`
+        var content =
+            `
+                <p> Celebrate spring <br>in style and save! </p>
+               <p>Easter is Sunday, April 17.</p>
+               <h6 style="margin-top: 30px;">${arr[0][1]}</h6> <br>
+               <h6>${arr[0][2]}</h6> <br>
+               <h6 style="margin-bottom: 50px;">${arr[0][3]}</h6> <br>
+            `
+        toggel_1.style.backgroundColor = 'black'
+        div.innerHTML = content
+        banner_img.append(div)
+
+
+        var element = 0;
+        function toggel() {
+            banner.style.backgroundImage = `url(${arr[element][0]})`
+            var content =
+                `
+                <p> Celebrate spring <br>in style and save! </p>
+               <p>Easter is Sunday, April 17.</p>
+               <h6 style="margin-top: 30px;">${arr[element][1]}</h6> <br>
+               <h6>${arr[element][2]}</h6> <br>
+               <h6 style="margin-bottom: 50px;">${arr[element][3]}</h6> <br>
+            `
+            // toggel()
+            div.innerHTML = content
+            banner_img.append(div)
+
+            if (element == 0) {
+                toggel_1.style.backgroundColor = 'black'
+                toggel_2.style.backgroundColor = 'white'
+                toggel_3.style.backgroundColor = 'white'
+            } else if (element == 1) {
+                toggel_2.style.backgroundColor = 'black'
+                toggel_1.style.backgroundColor = 'white'
+                toggel_3.style.backgroundColor = 'white'
+            } else if (element == 2) {
+                toggel_3.style.backgroundColor = 'black'
+                toggel_2.style.backgroundColor = 'white'
+                toggel_1.style.backgroundColor = 'white'
+            }
+        }
+
+        left_arrow.addEventListener('click', () => {
+            toggel()
+            if (element == 0) {
+                element = 2
+            } else {
+                element--
+            }
+        })
+
+        right_arrow.addEventListener('click', () => {
+            toggel()
+            if (element == 2) {
+                element = 0
+            } else {
+                element++
+            }
+        })
+
+        toggel_1.addEventListener('click', () => {
+            element = 0
+            toggel()
+        })
+        toggel_2.addEventListener('click', () => {
+            element = 1
+            toggel()
+        })
+        toggel_3.addEventListener('click', () => {
+            element = 2
+            toggel()
+        })
+    }
+    banner_change()
+
+    function basket_content() {
+
+        var arr = ['Easter <br> Gift Shop', '$10 <br> & Under', '$20 <br> & Under', 'Toys & <br> Games', 'Books', 'Candy', 'Beauty', 'E-Gift <br> Cards']
+        arr.forEach(element => {
+            var div = document.createElement('div')
+            var content =
+                `
+            <div>
+                <h4>${element}</h4>
+            </div>
+            `
+            div.innerHTML = content
+            basket.append(div)
+        });
+    }
+    basket_content()
+
+    function slider() {
+        var arr = [
+            ['https://media.kohlsimg.com/is/image/kohls/3767212_Genuine_Navy?wid=800&hei=800&op_sharpen=1',
+                'Sale $29.74', "Original $44.00 <br> Women's Croft & Barrow <br> Millennium Tummy Control <br>Pull-On Pants <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/2924992_Black_Sateen?wid=800&hei=800&op_sharpen=1',
+                'Sale $23.79', "Original $36.00<br>Women's Croft & Barrow<br>Classic Pull-On Straight Leg<br>Pants<br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5283649_White_Black_Stripe?wid=800&hei=800&op_sharpen=1',
+                'Sale $21.24', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/4926436_Navy_Texture?wid=800&hei=800&op_sharpen=1',
+                'Sale $41.27', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5243772_Multi_Stripe?wid=800&hei=800&op_sharpen=1',
+                'Sale $44.14', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5037581_Black?wid=800&hei=800&op_sharpen=1',
+                'Sale $34.78', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/3811392_Black?wid=800&hei=800&op_sharpen=1',
+                'Sale $39.25', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/4491406_Medium_Wash?wid=800&hei=800&op_sharpen=1',
+                'Sale $55.78', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5211694_Yellow_Green?wid=800&hei=800&op_sharpen=1',
+                'Sale $84.68', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-levis-01',
+                'Sale $14.74', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"]
+            ['https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-levis-01',
+            'Sale $14.74', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"]
+        ]
+        //arr[element]
+        var a = 0
+        var b = 6
+
+        function next(i, j) {
+            slide.innerHTML = ''
+            for (i; i < j; i++) {
+                var div = document.createElement('div')
+                var content =
+                    `
+                <div id="img" style="background-image: url(${arr[i][0]})"></div>
+                    <div id="content">
+                        <p style="color: red;">${arr[i][1]}</p>
+                        <p>${arr[i][2]}</p>
+                    </div>
+                </div>
+            `
+                div.innerHTML = content
+                slide.append(div)
+            }
+            if (a == 0) {
+                slide_left.style.display = 'none'
+                slide_right.style.display = 'flex'
+                return
+            }
+
+        }
+        next(a, b)
+
+        slide_left.addEventListener('click', () => {
+            a--
+            b--
+            if (a == 0) {
+                slide_left.style.display = 'none'
+                slide_right.style.display = 'flex'
+                return
+            } else {
+                slide_left.style.display = 'flex'
+                slide_right.style.display = 'flex'
+            }
+            next(a, b)
+        })
+
+        slide_right.addEventListener('click', () => {
+            a++
+            b++
+            if (b == arr.length - 1) {
+                slide_right.style.display = 'none'
+                slide_left.style.display = 'flex'
+            } else {
+                slide_right.style.display = 'flex'
+                slide_left.style.display = 'flex'
+            }
+            next(a, b)
+        })
+    }
+    slider()
+
+    function slider_2() {
+        var arr = [
+            ['https://media.kohlsimg.com/is/image/kohls/3767212_Genuine_Navy?wid=800&hei=800&op_sharpen=1',
+                'Sale $29.74', "Original $44.00 <br> Women's Croft & Barrow <br> Millennium Tummy Control <br>Pull-On Pants <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/2924992_Black_Sateen?wid=800&hei=800&op_sharpen=1',
+                'Sale $23.79', "Original $36.00<br>Women's Croft & Barrow<br>Classic Pull-On Straight Leg<br>Pants<br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5283649_White_Black_Stripe?wid=800&hei=800&op_sharpen=1',
+                'Sale $21.24', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/4926436_Navy_Texture?wid=800&hei=800&op_sharpen=1',
+                'Sale $41.27', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5243772_Multi_Stripe?wid=800&hei=800&op_sharpen=1',
+                'Sale $44.14', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5037581_Black?wid=800&hei=800&op_sharpen=1',
+                'Sale $34.78', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/3811392_Black?wid=800&hei=800&op_sharpen=1',
+                'Sale $39.25', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/4491406_Medium_Wash?wid=800&hei=800&op_sharpen=1',
+                'Sale $55.78', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/5211694_Yellow_Green?wid=800&hei=800&op_sharpen=1',
+                'Sale $84.68', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"],
+            ['https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-levis-01',
+                'Sale $14.74', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"]
+            ['https://media.kohlsimg.com/is/image/kohls/hp2-d-20220407-levis-01',
+            'Sale $14.74', "Original $36.00 <br>Women's Sonoma Goods <br>For Life Volume Three <br>Quarter Sleeve Top <br>"]
+        ]
+        //arr[element]
+        var a = 0
+        var b = 4
+
+        function next(i, j) {
+            slide_2.innerHTML = ''
+            for (i; i < j; i++) {
+                var div = document.createElement('div')
+                var content =
+                    `
+                <div id="img" style="background-image: url(${arr[i][0]})"></div>
+                    <div id="content">
+                        <p style="color: red;">${arr[i][1]}</p>
+                        <p>${arr[i][2]}</p>
+                    </div>
+                </div>
+            `
+                div.innerHTML = content
+                slide_2.append(div)
+            }
+            if (a == 0) {
+                slide_left_2.style.display = 'none'
+                slide_right_2.style.display = 'flex'
+                return
+            }
+
+        }
+        next(a, b)
+
+        slide_left_2.addEventListener('click', () => {
+            a--
+            b--
+            if (a == 0) {
+                slide_left_2.style.display = 'none'
+                slide_right_2.style.display = 'flex'
+                return
+            } else {
+                slide_left_2.style.display = 'flex'
+                slide_right_2.style.display = 'flex'
+            }
+            next(a, b)
+        })
+
+        slide_right_2.addEventListener('click', () => {
+            a++
+            b++
+            if (b == arr.length - 1) {
+                slide_right_2.style.display = 'none'
+                slide_left_2.style.display = 'flex'
+            } else {
+                slide_right_2.style.display = 'flex'
+                slide_left_2.style.display = 'flex'
+            }
+            next(a, b)
+        })
+    }
+    slider_2()
+
+</script>
+
+</html>
