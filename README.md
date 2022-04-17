@@ -1,4 +1,4 @@
-# Masai-Khol-Project
+# Masai-KHOL'S-Project
 
 ## KHOL'S CLONE
 
