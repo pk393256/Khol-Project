@@ -8,6 +8,6 @@
 - [PRATEEK](https://github.com/Pratikm05)
 - [VISHAL GUPTA](https://github.com/)
 
-**TECH STACKS**
 
+## TECH STACKS
 HTML|CSS|Javascript|JSON-Sever|Netlify
