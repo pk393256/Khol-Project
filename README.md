@@ -9,7 +9,7 @@
 - [VISHAL GUPTA](https://github.com/)
 
 <h1>DEMO</h1>
-
+<img src='https://github.com/pk393256/Masai-Khol-Project/blob/main/khol.gif'/>
 
 ## TECH STACKS
 HTML|CSS|Javascript|JSON-Sever|Netlify
