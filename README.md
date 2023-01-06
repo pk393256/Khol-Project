@@ -1,4 +1,4 @@
-# Masai-KHOL'S-Project
+# KHOL'S-Project
 <h3>Cloned the khol's online shopping website which has stores all across India and has many kind of product like clothes, shoes, toys, home décor, appliances and electronics . This project was collaboratively complete by a team of 5 people in just 5 days</h3>
 ## KHOL'S CLONE
 
